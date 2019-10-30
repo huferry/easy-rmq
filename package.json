@@ -1,0 +1,19 @@
+{
+  "name": "easy-rmq",
+  "version": "1.0.2",
+  "description": "RabbitMQ (amqp) for no-brainer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rabbitmq",
+    "queue",
+    "ampq"
+  ],
+  "author": "Ferry Utomo",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.5"
+  }
+}
