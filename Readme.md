@@ -60,6 +60,9 @@ required('easy-rmq').connect({
 1. [Connecting to Server](#Connecting-to-Server)
 2. [Access to The Queue](#Access-to-The-Queue)
 3. [Publish A Message](#Publish-A-Message)
+4. [Subscribing for Messages](#Subscribing-for-Messages)
+    4.1. [Handler Function](#Handler-Function)
+    4.2. [Error Handling](#Error-Handling)
 
 ## 1. Connecting to Server
 
@@ -158,4 +161,5 @@ function handleError(error, requeue) {
 }
 ```
 
-
+### 4.2. Error Handling
+Any error thrown in the processing will triggers the error handler (see example in previous section). The error handling function, which is provided by the user, will be given 2 arguments: the `error` and a `requeue` function. In case that the user decided that he wants to retry the processing then he can invoke the `requeue` function. The user can set a delay in milliseconds to this function. If no delay is provided it will default to 1 seconds.
